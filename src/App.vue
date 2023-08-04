@@ -1,39 +1,18 @@
 <template>
-  <span> bermuda R$ {{ unitPrice }}</span> <br>
-  <span> quantidade: {{ count }}</span>
-  <hr>
-  <button @click="count++"> adicionar </button>
-  <button @click="count >= 1 ? count-- : 0"> remover </button>
-  <span> {{ count }} </span>
-  <hr>
-  <span>total: R$ {{ (count * unitPrice).toFixed(2) }}</span>
-
+  <!-- {{ count }}
+  <button @click="count++"> + </button> -->
+  <BermudaPrice />
+  <!-- <BermudaPrice />
+  <BermudaPrice />
+  <BermudaPrice />
+  <BermudaPrice />
+  <BermudaPrice />
+  <BermudaPrice /> -->
 </template>
 
-<script lang="ts">
-  import { defineComponent } from 'vue'
-
-  export default defineComponent({
-    props: {
-      count: Number,
-      msg : {type: String, required: true}
-    },
-      data() {
-      return {
-        count : 0,
-        unitPrice : 29.69,
-      }
-    },
-    mothods : {
-      log(){
-        console.log(this.count)
-      }
-    },
-    mounted() {
-      this.msg
-    }
-  })
-
+<script setup lang="ts">
+  import BermudaPrice from './components/BermudaPrice.vue'
+  
+  // import { ref } from 'vue'
+  // const count = ref(0)
 </script>
-
-
