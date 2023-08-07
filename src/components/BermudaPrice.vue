@@ -2,10 +2,9 @@
     <hr>
     <span> bermuda R$ {{ unitPrice }}</span> <br>
     <span> quantidade: {{ count }}</span>
-    <hr>
     <button @click="increment"> + </button>
     <button @click="count >= 1 ? count-- : 0"> - </button>
-    <span> {{ count }} </span>
+    <hr>
     <span>total: R$ {{ (count * unitPrice).toFixed(2) }}</span>
     <hr>
 </template>
